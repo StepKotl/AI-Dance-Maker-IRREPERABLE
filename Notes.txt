@@ -1,0 +1,7 @@
+The best way to approach something like this is to have a pre-defined set of dances that a character can perform, then one of those options is selected by the ai using a selected section of the music file and ensured that it moves smoothly between the animations.
+After that, we take whatever output we get and throw it into godot, with timings depending on what it is that we're doing. 
+
+Look more into the ASIT++ Database of dances and take them for use
+https://google.github.io/aistplusplus_dataset/download.html
+
+Instead of having to look for specific databases, take clips of longer dances, and just pair it as closely to the inputted audio to make a dance. 
