@@ -309,7 +309,7 @@ class Network(object):
             results = [(np.argmax(self.feedforward(x)), np.argmax(y))
                        for (x, y) in data]
         else:
-            results = [(np.argmax(self.feedforward(x)), y)for (x, y) in data]
+            results = [np.argmax(self.feedforward(x)) for x in data]
 
         return results
 

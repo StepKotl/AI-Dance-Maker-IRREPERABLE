@@ -37,9 +37,9 @@ def run(fileDir):
     print("Training AI")
     net.SGD(training_data, 30, 500, 0.1, monitor_evaluation_accuracy=True, evaluation_data=validation_data)
     
-    # This was meant to test every section in the current piece and return a list of dances, but I didn't get to that point. 
+    # Save the network for faster future uses
     net.save("CurrentNetwork.json")
-    
+
     dances = []
     for i in splits:
         dances.append(net.dataInput(i))
