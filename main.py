@@ -35,11 +35,12 @@ def run(fileDir):
     net.large_weight_initializer()
     # Train 
     print("Training AI")
-    net.SGD(training_data, 30, 500, 0.1, monitor_evaluation_accuracy=True, evaluation_data=validation_data)
+    net.SGD(training_data, 500, 50, 1, monitor_evaluation_accuracy=True, evaluation_data=validation_data)
     
     # Save the network for faster future uses
     net.save("CurrentNetwork.json")
 
+    # Attempt at getting an output from the AI after training
     dances = []
     for i in splits:
         dances.append(net.dataInput(i))
