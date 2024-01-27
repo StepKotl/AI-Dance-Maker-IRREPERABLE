@@ -28,22 +28,25 @@ def run(fileDir):
     
     # Create the AI
     training_data, validation_data, test_data = load_data()
-    net = Network([127, 1000, 5000, 10385])
+    print("Setting up AI")
+    net = Network([127, 300, 502])
 
 
     net.large_weight_initializer()
     # Train 
+    print("Training AI")
     net.SGD(training_data, 30, 500, 0.1, monitor_evaluation_accuracy=True, evaluation_data=validation_data)
     
     # This was meant to test every section in the current piece and return a list of dances, but I didn't get to that point. 
-    net.save("Music_Editor\CurrentNetwork.json")
+    net.save("CurrentNetwork.json")
+    
     dances = []
-    for i in [1]:
-        dances.append(net.feedforward(i))
+    for i in splits:
+        dances.append(net.dataInput(i))
     print(dances)
 
 
-run("Music_Editor/Music/FullSongs/Mario.mid")
+run("Music/FullSongs/Mario.mid")
 """
 import Trainer
 training_data, validation_data, test_data = Trainer.load_data_wrapper()

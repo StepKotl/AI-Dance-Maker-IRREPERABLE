@@ -36,7 +36,7 @@ def load_data():
     """
     from math import floor, ceil
     # Load the pickle file
-    with open("Music_Editor/Music/Midi/trainingData.pkl", "rb") as f:
+    with open("Music/Midi/TrainingData.pkl", "rb") as f:
         training_data, validation_data, test_data = pickle.load(f)
     return (training_data, validation_data, test_data)
 

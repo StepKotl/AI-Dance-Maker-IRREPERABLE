@@ -40,7 +40,7 @@ def listed(mid):
             except KeyError:
                 pass
         
-
+        extraTime = 0
         # The notes, in combination, could have a shorter overall length depending on the tempo of the current section, and why this is taken
         if i.type == "set_tempo":
             tempo = i.tempo

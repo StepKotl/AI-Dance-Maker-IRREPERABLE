@@ -303,6 +303,15 @@ class Network(object):
 
         result_accuracy = sum(int(x == y) for (x, y) in results)
         return result_accuracy
+    
+    def dataInput(self, data, convert=False):
+        if convert:
+            results = [(np.argmax(self.feedforward(x)), np.argmax(y))
+                       for (x, y) in data]
+        else:
+            results = [(np.argmax(self.feedforward(x)), y)for (x, y) in data]
+
+        return results
 
     def total_cost(self, data, lmbda, convert=False):
         """Return the total cost for the data set ``data``.  The flag

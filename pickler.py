@@ -16,7 +16,7 @@ def vectorized_result(j):
     (0...9) into a corresponding desired output from the neural
     network."""
     
-    e = np.zeros((10385, 1))
+    e = np.zeros((502, 1))
     e[j] = 1.0
     return e
 
@@ -25,8 +25,8 @@ def vectorized_result(j):
 def pickled():
     # For every midi training file
     training = []
-    for v, midi in enumerate(os.listdir("Music_Editor/Music/Midi/Raw")):
-        mid = MidiFile(f"Music_Editor/Music/Midi/Raw/{midi}")
+    for v, midi in enumerate(os.listdir("Music/Midi/Raw")):
+        mid = MidiFile(f"Music/Midi/Raw/{midi}")
 
         # take the notes from the split version of the file
         for i, notes in enumerate(split(listed(mid))):
@@ -51,8 +51,7 @@ def pickled():
     
     
     # Save the training data in a pickle file to be loaded at a later time. 
-    with open("Music_Editor/Music/Midi/trainingData.pkl", "wb") as f:
+    with open("Music\Midi\TrainingData.pkl", "wb") as f:
         pickle.dump([training, validation_data, test_data], f)
         
-
-
+pickled()
