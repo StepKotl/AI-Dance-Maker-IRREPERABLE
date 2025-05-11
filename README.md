@@ -4,6 +4,7 @@ The input nodes were different sections of 8 bars of music, that each was associ
 The AI should've then taken the input, split it into 8 bar chunks, and associated it as closely as it could to an input piece, and spit out whatever
 dance was associated to the selected bars
 **NOTE: this was done BEFORE the AI boom in 2024**
+
 ===
 There were several problems with my approach 
 1. There are not enough publically available databases that have music in MIDI form associated with animations
