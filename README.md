@@ -14,5 +14,6 @@ There were several problems with my approach
 ---
 If I were to do this project again:
 1. I would actually learn from projects that have done this exact thing in the past, and try to see if their databases were available
-2. Instead of analyzing MIDI files, I would just approximate MP3 sound waves to each other, which would likely work wonders
-3. Learn Unity, and build the underlying platform so that I could test the actual output to see if that idea would even be viable
+2. Instead of analyzing MIDI files, I would just approximate MP3 sound waves to each other, which would likely work wonders compared to MIDI 
+
+3. Use C# instead of Python. Although Python is great for AI, it would be harder to implement within Unity. 
